@@ -1,0 +1,301 @@
+<!Doctype html>  
+<html>
+   <head>
+      <title>Kalkulator Sederhan Javascript Plain</title>
+      <!-- CSS Code -->  
+      <style>  
+         body {  
+         background-color:#fff;  
+         margin: 0px auto;  
+         }  
+         .calbody {
+         background: grey;
+         padding: 6px;
+         margin: 0 auto;
+         max-width: 332px;
+         padding-top: 22px;
+         }
+         #calbutton{
+          width: 339px;
+         }
+         h1{  
+         text-align: center;  
+         font-size: 40px;  
+         color: #003652;  
+         }  
+         #lcd {
+         text-align: right;
+         width: 328px;
+         height: 40px;
+         margin-bottom: 8px;
+         font-size: 18px;
+         } 
+         #lcdu {
+         color: grey;
+         text-align: right;
+         width: 328px;
+         height: 46px;
+         font-size: 15px;
+         } 
+         button {
+         background-color: #fff;
+         width: 80px;
+         height: 60px;
+         font-size: 20px;
+         border: 1px solid #754848;
+         }
+         button:hover{  
+         background-color: #cecdcd;   
+         }  
+      </style>
+   </head>
+   <body>
+      <h1>  
+         Kalkulator Sederhana
+      </h1>
+      <div class="calbody">
+         <form name="lcdform">  
+            <input id="lcdu" name="lcdsu" type="text" value="" />  
+            <input id="lcd" name="lcds" type="text" value="0" />  
+         </form>
+         <div id="calbutton">  
+            <button id="angka1" onclick="angkasatu();">1</button>  
+            <button id="angka2" onclick="angkadua();">2</button>  
+            <button id="angka3" onclick="angkatiga();">3</button>  
+            <button id="operationplus" onclick="operationplus();">+</button>   
+            <button id="angka4" onclick="angkaempat();">4</button>  
+            <button id="angka5" onclick="angkalima();">5</button>  
+            <button id="angka6" onclick="angkaenam();">6</button>  
+            <button id="operationmult" onclick="operationmult();">*</button>   
+            <button id="angka7" onclick="angkatujuh();">7</button>  
+            <button id="angka8" onclick="angkadelapan();">8</button>  
+            <button id="angka9" onclick="angkasembilan();">9</button>  
+            <button id="operationminus" onclick="operationminus();">-</button>  
+            <button id="clr" onclick="clr();">C</button>  
+            <button id="angka0" onclick="angkanol();">0</button>   
+            <button id="operationdivid" onclick="operationdivid();">/</button>  
+            <button id="sumbit" onclick="equalsto();">=</button>  
+         </div>
+      </div>
+      <!-- Javascript code -->  
+      <script>  
+         var firstnumber;  
+         var secondnumber;  
+         var result;  
+         var operations;  
+           
+         function angkasatu(){  
+          
+           if (document.lcdform.lcds.value == "0" || document.lcdform.lcds.value == result){  
+    
+            document.lcdform.lcds.value = "1";  
+                
+           }  
+           else //if(document.lcdform.lcds.value != "0")  
+           {  
+            document.lcdform.lcds.value = document.lcdform.lcds.value + "1";  
+           }  
+            
+         }  
+         function angkadua(){  
+            
+           if (document.lcdform.lcds.value == "0" || document.lcdform.lcds.value == result){  
+    
+            document.lcdform.lcds.value = "2";  
+                
+           }  
+           else //if(document.lcdform.lcds.value != "0")  
+           {  
+            document.lcdform.lcds.value = document.lcdform.lcds.value + "2";  
+           }  
+            
+         }  
+         function angkatiga(){  
+             
+           if (document.lcdform.lcds.value == "0" || document.lcdform.lcds.value == result){  
+    
+            document.lcdform.lcds.value = "3";  
+                
+           }  
+           else //if(document.lcdform.lcds.value != "0")  
+           {  
+            document.lcdform.lcds.value = document.lcdform.lcds.value + "3";  
+           }   
+             
+         }  
+         function angkaempat(){  
+            
+           if (document.lcdform.lcds.value == "0" || document.lcdform.lcds.value == result){  
+    
+            document.lcdform.lcds.value = "4";  
+                
+           }  
+           else //if(document.lcdform.lcds.value != "0")  
+           {  
+            document.lcdform.lcds.value = document.lcdform.lcds.value + "4";  
+           } 
+            
+         }  
+         function angkalima(){  
+            
+           if (document.lcdform.lcds.value == "0" || document.lcdform.lcds.value == result){  
+    
+            document.lcdform.lcds.value = "5";  
+                
+           }  
+           else //if(document.lcdform.lcds.value != "0")  
+           {  
+            document.lcdform.lcds.value = document.lcdform.lcds.value + "5";  
+           }  
+            
+         }  
+         function angkaenam(){  
+            
+           if (document.lcdform.lcds.value == "0" || document.lcdform.lcds.value == result){  
+    
+            document.lcdform.lcds.value = "6";  
+                
+           }  
+           else //if(document.lcdform.lcds.value != "0")  
+           {  
+            document.lcdform.lcds.value = document.lcdform.lcds.value + "6";  
+           }    
+            
+         }  
+         function angkatujuh(){  
+            
+           if (document.lcdform.lcds.value == "0" || document.lcdform.lcds.value == result){  
+    
+            document.lcdform.lcds.value = "7";  
+                
+           }  
+           else //if(document.lcdform.lcds.value != "0")  
+           {  
+            document.lcdform.lcds.value = document.lcdform.lcds.value + "7";  
+           } 
+         }  
+         function angkadelapan(){  
+            
+           if (document.lcdform.lcds.value == "0" || document.lcdform.lcds.value == result){  
+    
+            document.lcdform.lcds.value = "8";  
+                
+           }  
+           else //if(document.lcdform.lcds.value != "0")  
+           {  
+            document.lcdform.lcds.value = document.lcdform.lcds.value + "8";  
+           } 
+            
+         }  
+         function angkasembilan(){  
+             
+           if (document.lcdform.lcds.value == "0" || document.lcdform.lcds.value == result){  
+    
+            document.lcdform.lcds.value = "9";  
+                
+           }  
+           else //if(document.lcdform.lcds.value != "0")  
+           {  
+            document.lcdform.lcds.value = document.lcdform.lcds.value + "9";  
+           }  
+                    
+            
+         }  
+         function angkanol(){  
+            
+          if (document.lcdform.lcds.value == "0"){  
+             
+           document.lcdform.lcds.value = "0";  
+               
+          }  
+          else if (document.lcdform.lcds.value == result)  
+          {  
+           document.lcdform.lcds.value = "0";  
+          }  
+          else //jika(document.lcdform.lcds.value != "0")  
+          {  
+           document.lcdform.lcds.value = document.lcdform.lcds.value + "0";  
+          }  
+            
+         } 
+
+         function clr(){  
+          document.lcdform.lcds.value = "0";  
+          document.lcdform.lcdsu.value = "";  
+          return;  
+         }  
+           
+         function operationplus(){  
+            
+          operation = "+";  
+          firstnumber = parseInt(document.lcdform.lcds.value);  
+          document.lcdform.lcds.value = "0";  
+          document.lcdform.lcdsu.value = firstnumber + operation;   
+             
+         }  
+         function operationmult(){  
+            
+          operation = "*";  
+          firstnumber = parseInt(document.lcdform.lcds.value);  
+          document.lcdform.lcds.value = "0";  
+          document.lcdform.lcdsu.value = firstnumber + operation;  
+            
+         }  
+         function operationminus(){  
+            
+          operation = "-";  
+          firstnumber = parseInt(document.lcdform.lcds.value);  
+          document.lcdform.lcds.value = "0";  
+          document.lcdform.lcdsu.value = firstnumber + operation;  
+            
+         }  
+         function operationdivid(){  
+            
+          operation = "/";  
+          firstnumber = parseInt(document.lcdform.lcds.value);  
+          document.lcdform.lcds.value = "0";  
+          document.lcdform.lcdsu.value = firstnumber + operation;  
+            
+         }   
+         function equalsto(){  
+            
+          secondnumber = parseInt(document.lcdform.lcds.value);  
+            
+          if (operation == "+")  
+          {  
+           result = firstnumber + secondnumber;  
+          }  
+          else if (operation == "*"){  
+             
+           result = firstnumber * secondnumber;  
+             
+          }  
+          else if (operation == "-"){  
+             
+           result = firstnumber - secondnumber;  
+             
+          }    
+             else if (operation == "/"){  
+             
+           result = firstnumber / secondnumber;  
+              
+          }   
+          else if (operation == "^"){  
+             
+           for (var i = 0; i < secondnumber; i++){  
+              
+            result = firstnumber * i;  
+           }  
+             
+             
+          }  
+          document.lcdform.lcds.value ="";  
+          document.lcdform.lcds.value = result.toString();  
+          document.lcdform.lcdsu.value = firstnumber + operation + secondnumber + " = " + result.toString();  
+          return;  
+            
+         }  
+           
+      </script>  
+   </body>
+</html>
